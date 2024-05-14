@@ -8,6 +8,7 @@ import { RouterHead } from "./components/router-head/router-head";
 
 import "./global.css";
 
+
 export default component$(() => {
   /**
    * The root of a QwikCity site always start with the <QwikCityProvider> component,
@@ -22,6 +23,8 @@ export default component$(() => {
         <meta charSet="utf-8" />
         <link rel="manifest" href="/manifest.json" />
         <RouterHead />
+        <script id="qwikloader" src="./qwikloader.js" />
+        <script src="./qerror-reload.js" />
       </head>
       <body lang="en">
         <RouterOutlet />

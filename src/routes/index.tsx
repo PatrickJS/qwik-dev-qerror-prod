@@ -9,6 +9,15 @@ export default component$(() => {
         Can't wait to see what you build with qwik!
         <br />
         Happy coding.
+        <button
+          onClick$={() => {
+            console.log("clicked");
+            console.log("clicked okok");
+          }}
+        >
+          {" "}
+          click here
+        </button>
       </div>
     </>
   );

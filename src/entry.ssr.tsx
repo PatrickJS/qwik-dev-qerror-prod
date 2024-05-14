@@ -11,14 +11,17 @@
  *
  */
 import {
-  renderToStream,
-  type RenderToStreamOptions,
+  renderToString,
+  type RenderToStringOptions,
 } from "@builder.io/qwik/server";
 import { manifest } from "@qwik-client-manifest";
 import Root from "./root";
 
-export default function (opts: RenderToStreamOptions) {
-  return renderToStream(<Root />, {
+export default function (opts: RenderToStringOptions) {
+  return renderToString(<Root />, {
+    qwikLoader: {
+      include: "never",
+    },
     manifest,
     ...opts,
     // Use container attributes to set attributes on the html tag.
